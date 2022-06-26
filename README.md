@@ -13,3 +13,13 @@
   bash migrate-flyway.sh jdbc:postgresql://host.docker.internal:5432/auto_maia_cli auto_maia_cli auto_maia_cli
 ```
 
+## Technologies
+
+- Java 11
+- Spring Boot 
+- PostgreSQL
+- Spring Maven
+- Docker
+- Log4j
+- RabbitMQ
+
