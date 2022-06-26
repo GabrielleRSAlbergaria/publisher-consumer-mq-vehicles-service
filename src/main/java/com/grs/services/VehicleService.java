@@ -4,11 +4,12 @@ import com.grs.constants.RabbitmqConstants;
 import com.grs.models.VehicleModel;
 import com.grs.models.dto.VehicleDTO;
 import com.grs.repositories.VehicleRepository;
-import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class VehicleService {
     @Autowired
     private VehicleRepository vehicleRepository;
@@ -21,8 +22,8 @@ public class VehicleService {
                 .modelo(vehicleDTO.getModelo())
                 .disponivel(vehicleDTO.getDisponivel())
                 .build();
-
         vehicleRepository.save(vehicleModel);
+
     }
 
     public void sendVehicleToQueue(VehicleDTO vehicleDTO) {

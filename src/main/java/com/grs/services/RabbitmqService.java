@@ -12,11 +12,11 @@ public class RabbitmqService {
     @Autowired
     private ObjectMapper objectMapper;
 
-    public void postMessage(String queueName, Object message){
+    public void postMessage(String queueName, Object message) {
         try {
             String jsonMessage = this.objectMapper.writeValueAsString(message);
             this.rabbitTemplate.convertAndSend(queueName, jsonMessage);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

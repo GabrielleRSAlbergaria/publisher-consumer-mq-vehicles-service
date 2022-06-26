@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/vehicles")
-public class VehicleController {
+public class VehiclesController {
     @Autowired
     private VehicleService vehicleService;
 
     @PostMapping
-    private ResponseEntity postMessage(@RequestBody VehicleDTO vehicleDTO){
+    private ResponseEntity postMessage(@RequestBody VehicleDTO vehicleDTO) {
         this.vehicleService.sendVehicleToQueue(vehicleDTO);
         return new ResponseEntity(HttpStatus.CREATED);
     }
