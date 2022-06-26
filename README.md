@@ -1,0 +1,1 @@
+# publisher-consumer-mq-vehicles-service
