@@ -1,4 +1,4 @@
-package com.grs.consumer;
+package com.grs.consumers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.grs.constants.RabbitmqConstants;
